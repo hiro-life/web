@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Academic Website</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        header {
+//	     background: url('https://www.hiroshima-u.ac.jp/themes/custom/hu_theme/en/images/visual/movie.mp4') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            transition: all 0.5s ease;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        nav {
+	    display: flex;
+//	    text-align: center;
+	    margin: auto;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1;
+            transition: all 0.5s ease;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+
+	/* Style for the dropdown */
+	.dropdown {
+	    position: relative;
+	    display: inline-block;
+	}
+
+	/* Hidden dropdown content */
+	.dropdown-content {
+	    display: none;
+	    position: absolute;
+	    background-color: #f9f9f9;
+	    min-width: 160px;
+	    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+	    z-index: 1;
+	}
+
+	/* Links inside the dropdown */
+	.dropdown-content a {
+	    color: black;
+	    padding: 12px 16px;
+	    text-decoration: none;
+	    display: block;
+	}
+
+	/* Show dropdown on hover */
+	.dropdown:hover .dropdown-content {
+	    display: block;
+	}
+
+
+
+        /* Menu Icon styling */
+        .menu-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            z-index: 1000; /* Ensure it stays on top */
+        }
+
+
+        section {
+            padding: 60px 20px;
+            min-height: 100vh;
+            text-align: center;
+            background: white;
+        }
+
+        section#about {
+            background: url('./about_FP.png') no-repeat center center fixed;
+            background-size: cover;
+	    background-color: rgba(211, 187, 183, 0.8);
+            color: #333;
+        }
+
+
+        section#projects {
+//            background: url('projects-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+	    background-color: #B3CAD8;
+            color: white;
+        }
+
+
+        section#publications {
+//            background: url('publications-image.jpg') no-repeat center center fixed;
+            background-color: #333333;
+            background-size: cover;
+            color: white;
+        };
+
+	section#publications .paper {
+	    width: 300px;
+            color: #ffffff;
+            font-size: 11pt;
+	    margin: 5px 10px;
+        }
+
+        section#publications .paper ol {
+	    text-align: left;
+        }
+
+        section#publications .paper li {
+            flex: 0 0 auto;
+	    padding: 0;
+        }
+          
+        section#publications .paper a { 
+            color: white;
+            font-size: 10pt;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+	    margin: 5px 0 0 0;
+            border-radius: 15px;
+            float: left;
+        }   
+
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+
+        /* Add scrolling transition for smooth effects */
+        header.small {
+            height: 80vh;
+            background-size: 100% 100%;
+        }
+
+        nav.scrolled {
+            background: #333;
+            color: white;
+        }
+
+        nav.scrolled a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+	<video playsinline="" autoplay="" loop="" muted="" poster="https://www.hiroshima-u.ac.jp/themes/custom/hu_theme/en/images/visual/movie.jpg" onclick="this.play();">
+      <source src="https://www.hiroshima-u.ac.jp/themes/custom/hu_theme/en/images/visual/movie.mp4" type="video/mp4">
+	</video>
+
+        <h1>Your Name</h1>
+    </header>
+
+
+    <nav id="nav">
+	Data Driven Multi-omics Integration
+	<a href="#about">ABOUT</a> |
+	 
+	<a href="#research">RESEARCH</a> | 
+
+	<!-- Projects Dropdown -->
+<!--	    <div class="dropdown">
+              <a href="#projects">Projects</a>
+              <div class="dropdown-content">
+                 <a href="#project1">Project 1</a>
+                 <a href="#project2">Project 2</a>
+                 <a href="#project3">Project 3</a>
+              </div>
+            </div>
+-->
+
+        <a href="#publications">PUBLICATIONS</a> | 
+        <a href="#contact">CONTACT</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Here’s some information about yourself, your education, and career.</p>
+
+	<div style="width:500px;text-align:left;margin:0 30px 0 30px;float:right">
+	<h3>Current Positions</h3>
+	<table style="margin-top: -10px">
+	<tr><td width=20%>Researcher</td>
+	<td>Graduate School of Integrated Sciences for Life, Hiroshima University, Japan</td</tr>
+	<tr><td>Visiting Scientist</td>
+	<td>Laboratory for Regulatory Genomics, Center for Integrative Medical Sciences, RIKEN, Japan</td></tr>
+	</table>
+	<br>	
+
+	<h3>Research Experiences</h3>
+	<table style="margin-top: -10px">
+	<tr><td width=20%>Visiting Scientist</td><td>Laboratory for Genome Information Analysis, Center for Integrative Medical Sciences, RIKEN, Japan</td></tr>
+	<tr><td>Postdoc</td><td>Institute of Bioinformatics and Structural Biology, National Tsing Hua University, Taiwan</td></tr>
+	<tr><td>Visiting Postdoc</td><td>Department of Biostatistics, University of Oslo, Norway</td></tr>
+	<tr><td>Research Assistant</td><td>Department of Medical Research, Chang Gung Memorial Hospital, Taiwan</td></tr>
+	<tr><td>Research Assistant</td><td>Biodiversity Research Center, Academia Sinica, Taiwan</td></tr>
+	</table>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+    <section id="research">
+    <h2>RESEARCH</h2>
+    <p>Details about your current and past academic projects.</p>
+
+	<div><img style="width:400px" src="./research_interests.png"/></div>
+
+
+    <div style="text-align:left">
+	<h4>A) Transcribed cis-Regulatory Elements in the Human Genome
+	<span style="border-radius:15px;background-color:#D4B8B4;padding:5px 10px;font-size:10pt;display:inline;font-weight:normal;">Genomics</span>
+        <span style="border-radius:15px;background-color:#97A5C0;padding:5px 10px;font-size:10pt;display:inline;font-weight:normal;">Transcriptomics</span></h4>
+
+	<h4>B) Somatic Mutation and Clonal Evolution at Single Cell Resolution
+	<span style="border-radius:15px;background-color:#D4B8B4;padding:5px 10px;font-size:10pt;display:inline;font-weight:normal;">Genomics</span>
+	<span style="border-radius:15px;background-color:#A9B7AA;padding:5px 10px;font-size:10pt;display:inline;font-weight:normal;">Epigenomics</span>
+        <span style="border-radius:15px;background-color:#97A5C0;padding:5px 10px;font-size:10pt;display:inline;font-weight:normal;">Transcriptomics</span></h4>
+
+
+	<h4>C) Evolution of Snake Venom Regulation
+	<span style="border-radius:15px;background-color:#D4B8B4;padding:5px 10px;font-size:10pt;display:inline;font-weight:normal;">Genomics</span>
+	<span style="border-radius:15px;background-color:#97A5C0;padding:5px 10px;font-size:10pt;display:inline;font-weight:normal;">Transcriptomics</span>
+	<span style="border-radius:15px;background-color:#E6C786;padding:5px 10px;font-size:10pt;display:inline;font-weight:normal;">Proteomics</span></h4>
+
+
+	<h4>D) Evolution of Retrocopies
+	<span style="border-radius:15px;background-color:#D4B8B4;padding:5px 10px;font-size:10pt;display:inline;font-weight:normal;">Genomics</span>
+        <span style="border-radius:15px;background-color:#97A5C0;padding:5px 10px;font-size:10pt;display:inline;font-weight:normal;">Transcriptomics</span></h4>
+
+
+	<h4>E) Kawasaki Disease
+        <span style="border-radius:15px;background-color:#97A5C0;padding:5px 10px;font-size:10pt;display:inline;font-weight:normal;">Transcriptomics</span>
+	<span style="border-radius:15px;background-color:#BFBFBF;padding:5px 10px;font-size:10pt;display:inline;font-weight:normal;">Metagenomics</span></h4>
+
+	
+	<h4>F) Bioinformatics Tools</h3>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+    <section id="publications">
+        <h2>Publications</h2>
+        <p>A list of your research papers and publications.</p>
+
+	<div class="paper" style="width:800px;margin:auto">
+          <ol reversed>
+
+	<h3>2024</h3>
+
+	  <div style="margin:0 0 10px 0;display:flex;justify-content:space-between;">
+          <div>
+	  <li>A single-cell atlas of transcribed cis-regulatory elements in the human genome
+	  </li>
+	  <a href="https://#">DOI:#</a>
+          </div>
+          <div style="float:right;padding:0 0 0 10px"><img style="width:100px" border="0" src="./IF_Nature.png"/></div>
+          </div>
+
+
+	<h3>2023</h3>
+
+	  <div style="margin:0 0 10px 0;display:flex;justify-content:space-between;">
+	  <div>
+	  <li><b><u>Pan, C. T.</u></b>, Lin, C. C., Lin, I. J., Chien, K. Y., Lin, Y. S., Chang, H. H., & Wu, W. G. (2023). The evolution and structure of snake venom phosphodiesterase (svPDE) highlight its importance in venom actions. eLife, 12, e83966.</li>
+	  <a href="https://doi.org/10.7554/eLife.83966">DOI:10.7554/eLife.83966</a>
+	  </div>
+	  <div style="float:right;padding:0 0 0 10px"><img style="width:100px" border="0" src="./IF_eLife.png"/></div>
+          </div>
+
+	  <div style="margin:0 0 10px 0;display:flex;justify-content:space-between;">
+	  <div>
+	  <li>Kao, P. Y., Chen, M. H., Chang, W. A., Pan, M. L., Shu, W. D., Jong, Y. J., Huang, H. D., Wang, C. Y., Chu, H. Y., <b><u>Pan, C. T.</u></b>, Liu, Y. L., & Lin, Y. S. (2023). A genome-wide association study (GWAS) of the personality constructs in CPAI-2 in Taiwanese Hakka populations. PloS one, 18(2), e0281903.</li>
+	  <a href="https://doi.org/10.1371/journal.pone.0281903">DOI:10.1371/journal.pone.0281903"</a>
+	  </div>
+	  <div style="float:right;padding:0 0 0 10px"><img style="width:100px" border="0" src="./IF_PLoSONE.png"/></a></div>
+	  </div>
+
+	<h3>2020</h3>
+
+	  <div style="margin:0 0 10px 0;display:flex;justify-content:space-between;">
+	  <div>
+	  <li><b><u>Pan, C. T.</u></b>, & Lin, Y. S. (2020). MicroRNA retrocopies generated via L1-mediated retrotransposition in placental mammals help to reveal how their parental genes were transcribed. Scientific reports, 10(1), 20612.</li>
+	  <a href="https://doi.org/10.1038/s41598-020-77381-8">DOI:10.1038/s41598-020-77381-8</a>
+	  </div>
+	  <div style="float:right;padding:0 0 0 10px"><img style="width:100px" border="0" src="./IF_SR.png"/></div>
+	  </div>
+
+	<h3>2019</h3>
+
+	  <div style="margin:0 0 10px 0;display:flex;justify-content:space-between;"> 
+          <div>
+	  <li>Kuo, H. C.*, <b><u>Pan, C. T.*</u></b>, Huang, Y. H., Huang, F. C., Lin, Y. S., Li, S. C., & Huang, L. H. (2019). Global Investigation of Immune Repertoire Suggests Kawasaki Disease Has Infectious Cause. Circulation journal : official journal of the Japanese Circulation Society, 83(10), 2070–2078.</li>
+	  <a href="https://doi.org/10.1253/circj.CJ-19-0206">DOI:10.1253/circj.CJ-19-0206</a>
+	  </div>
+	  <div style="float:right;padding:0 0 0 10px"><img style="width:100px" border="0" src="./IF_CJ.png"/></div>
+          </div>
+
+
+	<h3>2018</h3>
+
+	  <div style="margin:0 0 10px 0;display:flex;justify-content:space-between;">
+	  <div>
+	  <li>Huang, L. H., Kuo, H. C., <b><u>Pan, C. T.</u></b>, Lin, Y. S., Huang, Y. H., & Li, S. C. (2018). Multiomics analyses identified epigenetic modulation of the S100A gene family in Kawasaki disease and their significant involvement in neutrophil transendothelial migration. Clinical epigenetics, 10(1), 135.</li>
+	  <a href="https://doi.org/10.1186/s13148-018-0557-1">DOI:10.1186/s13148-018-0557-1</a>
+	  </div>
+	  <div style="float:right;padding:0 0 0 10px"><img style="width:100px" border="0" src="./IF_CE.png"/></div>
+          </div>
+
+	
+	<h3>2015</h3>
+
+	  <div style="margin:0 0 10px 0;display:flex;justify-content:space-between;">
+          <div>
+	  <li>Tsai, K. W.*, Chang, B.*, <b><u>Pan, C. T.</u></b>, Lin, W. C., Chen, T. W., & Li, S. C. (2015). Evaluation and application of the strand-specific protocol for next-generation sequencing. BioMed research international, 2015, 182389.</li>
+	  <a href="https://doi.org/10.1155/2015/182389">DOI:10.1155/2015/182389</a>
+	  </div>
+
+	  <div style="float:right;padding:0 0 0 10px"><img style="width:100px" border="0" src="./IF_BMRI.png"/></div>
+          </div>
+  
+
+	<h3>2014</h3>
+
+	  <div style="margin:0 0 10px 0;display:flex;justify-content:space-between;">
+          <div>
+          <li>Lin, C. C., Chang, Y. M., <b><u>Pan, C. T.</u></b>, Chen, C. C., Ling, L., Tsao, K. C., Yang, R. B., & Li, W. H. (2014). Functional evolution of cardiac microRNAs in heart development and functions. Molecular biology and evolution, 31(10), 2722–2734.</li>
+	  <a href="https://doi.org/10.1093/molbev/msu217">DOI:10.1093/molbed/msu217</a>
+          </div>
+	
+	  <div style="float:right;padding:0 0 0 10px"><img style="width:100px" border="0" src="./IF_MBE.png"/></div>
+          </div>
+
+
+	  <div style="margin:0 0 10px 0;display:flex;justify-content:space-between;">
+          <div>
+	  <li><b><u>Pan, C. T.*</u></b>, Tsai, K. W.*, Hung, T. M., Lin, W. C., Pan, C. Y., Yu, H. R., & Li, S. C. (2014). miRSeq: a user-friendly standalone toolkit for sequencing quality evaluation and miRNA profiling. BioMed research international, 2014, 462135.</li>
+	  <a href="https://doi.org/10.1155/2014/462135">DOI:10.1155/2014/462135</a>
+          </div>
+
+	  <div style="float:right;padding:0 0 0 10px"><img style="width:100px" border="0" src="./IF_BMRI.png"/></div>
+          </div>
+
+
+	<h3>2011</h3>
+
+	  <div style="margin:0 0 10px 0;display:flex;justify-content:space-between;">
+          <div>
+          <li>Lin, Y. S., Liu, F. G., Wang, T. Y., <b><u>Pan, C. T.</u></b>, Chang, W. T., & Li, W. H. (2011). A simple method using PyrosequencingTM to identify de novo SNPs in pooled DNA samples. Nucleic acids research, 39(5), e28.</li>
+	  <a href="https://doi.org/10.1093/nar/gkq1249">DOI:10.1093/nar/gkq1249</a>
+          </div>
+
+	  <div style="float:right;padding:0 0 0 10px"><img style="width:100px" border="0" src="./IF_NAR.png"/></div>
+          </div>
+
+          </ol>
+	</div>
+
+
+    </section>
+
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Your contact details and social media links.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+
+    <script>
+        // Scroll effect for shrinking the header
+        window.addEventListener('scroll', function() {
+            var header = document.getElementById('header');
+            var nav = document.getElementById('nav');
+            if (window.scrollY > 50) {
+                header.classList.add('small');
+                nav.classList.add('scrolled');
+            } else {
+                header.classList.remove('small');
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>
